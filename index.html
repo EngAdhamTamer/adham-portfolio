@@ -3,107 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adham Tamer — AI Engineer Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Adham Tamer — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
+    /* ===== Global ===== */
     body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #0d0d0d;
-      color: #f2f2f2;
-      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+      background: #0e0e0e;
+      color: #fff;
     }
-    header {
-      background: linear-gradient(135deg,#0d0d0d,#1a1a1a);
-      padding: 80px 20px;
-      text-align: center;
-      font-size: 36px;
-      font-weight: bold;
-      color: #00bfff;
-    }
-    nav {
-      position: sticky;
-      top: 0;
+
+    a { text-decoration: none; color: #00c8ff; }
+
+    /* ===== Hero Section (Modern Canva-style) ===== */
+    .hero {
+      height: 100vh;
       display: flex;
-      justify-content: center;
-      gap: 25px;
-      padding: 15px;
-      background: #111;
-      z-index: 1000;
-    }
-    nav a {
-      color: #aaa;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #00bfff;
-    }
-    section {
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 20px;
-    }
-    #about {
-      display: flex;
-      gap: 40px;
       align-items: center;
-      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px;
+      background: linear-gradient(135deg, #0e0e0e, #1b1b1b);
     }
-    #about img {
-      width: 200px;
-      border-radius: 50%;
-      border: 3px solid #00bfff;
+
+    .hero-container {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      max-width: 1100px;
     }
-    #about .bio {
-      flex: 1;
-      min-width: 280px;
+
+    .hero-text h1 {
+      font-size: 48px;
+      font-weight: 700;
     }
+
+    .hero-text p {
+      font-size: 18px;
+      color: #cfcfcf;
+    }
+
+    .hero img {
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 20px;
+      border: 3px solid #00c8ff;
+      box-shadow: 0 0 25px rgba(0, 200, 255, 0.3);
+    }
+
+    /* ===== Section Titles ===== */
     h2 {
-      color: #00bfff;
+      font-size: 32px;
       margin-bottom: 15px;
-      font-size: 28px;
+      color: #00c8ff;
     }
+
+    section { padding: 70px 20px; max-width: 1100px; margin: auto; }
+
+    /* ===== Projects ===== */
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
+      gap: 25px;
     }
-    .project-card {
-      background: #141414;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,191,255,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
+
+    .card {
+      background: #161616;
+      padding: 25px;
+      border-radius: 16px;
+      border: 1px solid #1f1f1f;
+      transition: 0.3s;
     }
-    .project-card:hover {
+
+    .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 0 30px rgba(0,191,255,0.3);
+      box-shadow: 0 0 25px rgba(0, 200, 255, 0.2);
     }
+
+    /* ===== Skills ===== */
     .skills {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
     }
+
     .skill {
-      background: #1a1a1a;
-      padding: 8px 15px;
-      border-radius: 20px;
-      border: 1px solid #00bfff;
-      font-weight: 500;
+      background: #1c1c1c;
+      padding: 10px 18px;
+      border-radius: 30px;
+      border: 1px solid #00c8ff;
+      font-size: 15px;
     }
-    .contact p {
-      margin: 5px 0;
-    }
-    .contact a {
-      color: #00bfff;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .contact a:hover {
-      color: #fff;
-    }
+
+    /* ===== Contact ===== */
+    .contact a { font-size: 18px; display: block; margin: 8px 0; }
+
+    /* ===== Footer ===== */
     footer {
       text-align: center;
       padding: 25px;
@@ -115,77 +112,78 @@
 </head>
 <body>
 
-  <header>Adham Tamer — AI Engineer</header>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about">
-   <img src="adham.jpg" alt="Adham Tamer">
-    <div class="bio">
-      <h2>About Me</h2>
-      <p>I’m <strong>Adham Tamer</strong>, a motivated AI engineering student with strong Python skills, specializing in machine learning, deep learning, and optimization-based solutions. Experienced in supervised and unsupervised learning, data analysis, and predictive modeling with <strong>Scikit-learn, Pandas, and NumPy</strong>.</p>
-      <p>Skilled in <strong>deep learning and computer vision</strong> using TensorFlow and Keras, with experience in <strong>Generative AI models</strong>. Certified in <strong>AWS AI Practitioner</strong> and AWS Academy Graduate in Cloud Architecting and Cloud Foundations.</p>
-      <p>My projects include <strong>Crime Classification (Random Forest)</strong>, <strong>Swarm Optimization presentations</strong>, and <strong>FIRE-EDGE: a real-time edge-AI firefighting system</strong>. Passionate about building efficient, sustainable AI solutions.</p>
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-container">
+      <img src="adham.jpg" alt="Adham Tamer">
+      <div class="hero-text">
+        <h1>Adham Tamer</h1>
+        <p>AI Engineer • Machine Learning • Deep Learning • Optimization</p>
+      </div>
     </div>
   </section>
 
-  <section id="projects">
+  <!-- ===== ABOUT ===== -->
+  <section>
+    <h2>About Me</h2>
+    <p>I’m <strong>Adham Tamer</strong>, an AI engineering student with strong Python experience, specializing in machine learning, deep learning, optimization algorithms, and edge-AI systems. I work with Scikit-learn, Pandas, NumPy, TensorFlow/Keras, YOLOv8, and ROS.</p>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section>
     <h2>Projects</h2>
+
     <div class="projects">
-      <div class="project-card">
-        <h3>Crime Category Classification — GWO</h3>
-        <p>Classification model enhanced with Grey Wolf Optimization, improving feature selection and accuracy.</p>
-        <p><em>Tools:</em> Python, Scikit-learn, GWO</p>
+      <div class="card">
+        <h3>Crime Classification — GWO</h3>
+        <p>Enhanced accuracy using Grey Wolf Optimization for feature selection.</p>
       </div>
-      <div class="project-card">
+
+      <div class="card">
         <h3>ABC Optimization Presentation</h3>
-        <p>Visual explanation of the ABC algorithm with practical optimization tasks and performance comparisons.</p>
-        <p><em>Tools:</em> ABC, Python, Visualization</p>
+        <p>Deep explanation and visualization of Artificial Bee Colony algorithm.</p>
       </div>
-      <div class="project-card">
-        <h3>Premier League 2023/24 Player Stats</h3>
-        <p>Predictive modeling and statistical analysis of EPL player data.</p>
-        <p><em>Tools:</em> Pandas, NumPy, Machine Learning</p>
+
+      <div class="card">
+        <h3>EPL 2023/24 Player Stats</h3>
+        <p>Predictive modeling and advanced player metric analysis.</p>
       </div>
-      <div class="project-card">
-        <h3>FIRE-EDGE: Real-Time Firefighting Edge System</h3>
-        <p>Edge-AI AR system with YOLOv8n, multi-sensor Kalman filter, enhancing firefighter safety in smoke-filled environments.</p>
-        <p><em>Tools:</em> YOLOv8, NVIDIA Jetson Xavier NX, Kalman Filter, ROS/Gazebo</p>
+
+      <div class="card">
+        <h3>FIRE-EDGE</h3>
+        <p>YOLOv8 + Kalman Filter edge system for smoke navigation.</p>
       </div>
     </div>
   </section>
 
-  <section id="skills">
+  <!-- ===== SKILLS ===== -->
+  <section>
     <h2>Skills</h2>
+
     <div class="skills">
       <span class="skill">Python</span>
       <span class="skill">Machine Learning</span>
       <span class="skill">Deep Learning</span>
       <span class="skill">Computer Vision</span>
-      <span class="skill">Optimization (GWO, ABC)</span>
-      <span class="skill">Scikit-learn</span>
-      <span class="skill">Pandas & NumPy</span>
-      <span class="skill">Edge AI / YOLOv8</span>
-      <span class="skill">ROS / Gazebo</span>
-      <span class="skill">Cloud (AWS)</span>
+      <span class="skill">GWO</span>
+      <span class="skill">ABC</span>
+      <span class="skill">TensorFlow</span>
+      <span class="skill">YOLOv8</span>
+      <span class="skill">Pandas</span>
+      <span class="skill">NumPy</span>
+      <span class="skill">AWS</span>
     </div>
   </section>
 
-  <section id="contact" class="contact">
+  <!-- ===== CONTACT ===== -->
+  <section class="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:adhamt864@gmail.com">adhamt864@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/adhamtamer/" target="_blank">Adham Tamer</a></p>
-    <p>GitHub: <a href="https://github.com/Tamoora69" target="_blank">Tamoora69</a></p>
+    <a href="mailto:adhamt864@gmail.com">📧 Email: adhamt864@gmail.com</a>
+    <a href="https://www.linkedin.com/in/adhamtamer/" target="_blank">🔗 LinkedIn</a>
+    <a href="https://github.com/Tamoora69" target="_blank">💻 GitHub</a>
   </section>
 
-  <footer>
-    © 2025 Adham Tamer — All Rights Reserved
-  </footer>
+  <footer>© 2025 Adham Tamer — All Rights Reserved</footer>
 
 </body>
 </html>
